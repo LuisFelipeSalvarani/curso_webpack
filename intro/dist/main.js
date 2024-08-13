@@ -1,1 +1,1 @@
-console.log("Hello Webpack 2");
+console.log("Mudamos a configuração!");
