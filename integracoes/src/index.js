@@ -1,8 +1,16 @@
 // Import fonts
-import './fonts.css'
+import './fonts.css';
 
 // Import JQuery
 import $ from 'jquery';
+
+// Import Font Awesome
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
+import { faBacon, faAnchor } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faBacon);
+library.add(faAnchor);
+dom.watch();
 
 const body = $('body');
 
