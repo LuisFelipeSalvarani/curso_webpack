@@ -2,7 +2,7 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/heading.css ***!
   \******************************************************************************/
 .title {
-    background-color: #000;
+    background-color: darkgreen;
     color: #999;
     text-align: center;
     padding: 20px;
