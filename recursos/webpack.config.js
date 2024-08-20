@@ -8,8 +8,10 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js'
     },
+    mode: 'development',
     devServer: {
-        historyApiFallback: true
+        historyApiFallback: true,
+        hot: true
     },
     module: {
         rules: [
