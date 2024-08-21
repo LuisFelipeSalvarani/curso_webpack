@@ -10,3 +10,18 @@ if(module.hot) {
         print();
     });
 }
+
+function createButton() {
+    const btn = document.createElement('button');
+    btn.innerText = 'Clica aqui!';
+
+    document.querySelector('body').appendChild(btn);
+
+    btn.onclick = e => import('./lazy').then(module => {
+        const lazy = module.default;
+
+        lazy();
+    });
+}
+
+createButton();
