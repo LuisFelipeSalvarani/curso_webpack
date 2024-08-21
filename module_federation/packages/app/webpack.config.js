@@ -10,14 +10,14 @@ module.exports = {
         publicPath: 'http://localhost:9001/'
     },
     devServer: {
-        contentBase: path.resolve(__dirname, './dist'),
-        index: 'index.html',
+        static: path.resolve(__dirname, './dist'),
         port: 9001,
         historyApiFallback: true
     },
     resolve: {
         extensions: [".jsx", ".js", '.json']
     },
+    mode: 'development',
     module: {
         rules: [
             {
