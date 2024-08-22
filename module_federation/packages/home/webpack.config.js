@@ -43,8 +43,19 @@ module.exports = {
             name: 'HomeApp',
             filename: 'remoteEntry.js',
             exposes: {
-                './HomePage': './src/Home'
+                './HomeApp': './src/Home.js'
+            },
+            shared: {
+                react: {
+                    singleton: true,
+                    requiredVersion: "^18.0.0",
+                },
+                'react-dom': {
+                    singleton: true,
+                    requiredVersion: "^18.0.0",
+                },
             }
+            
         })
     ]
 }

@@ -43,8 +43,18 @@ module.exports = {
             name: 'ContactApp',
             filename: 'remoteEntry.js',
             exposes: {
-                './ContactPage': './src/Contact'
-            }
+                './ContactApp': './src/Contact.js'
+            },
+            shared: {
+                react: {
+                    singleton: true,
+                    requiredVersion: "^18.0.0",
+                },
+                'react-dom': {
+                    singleton: true,
+                    requiredVersion: "^18.0.0",
+                },
+            }            
         })
     ]
 }

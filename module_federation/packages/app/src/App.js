@@ -1,12 +1,16 @@
 import React, { Suspense } from "react";
-import { BrowserRouter as Router, Routes , Route, Link } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { Navbar, Nav, NavItem } from "reactstrap";
 
 // CSS
-import './app.css'
+import './app.css';
 
 const App = () => {
-    return(
+    // MF
+    const Home = React.lazy(() => import("HomeApp/HomeApp"));
+    const Contact = React.lazy(() => import("ContactApp/ContactApp"));
+
+    return (
         <Router>
             <div>
                 <Navbar color="light" light expand="md">
@@ -19,9 +23,15 @@ const App = () => {
                         </NavItem>
                     </Nav>
                 </Navbar>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Routes>
+                        <Route exact path="/" element={<Home />} />
+                        <Route path="/contact" element={<Contact />} />
+                    </Routes>
+                </Suspense>
             </div>
         </Router>
-    )
+    );
 }
 
 export default App;
